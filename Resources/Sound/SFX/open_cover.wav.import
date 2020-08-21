@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/open_cover.wav-d1d7b2eca4000a2bca3392919cd92bae.sample"
+
+[deps]
+
+source_file="res://Resources/Sound/SFX/open_cover.wav"
+dest_files=[ "res://.import/open_cover.wav-d1d7b2eca4000a2bca3392919cd92bae.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,127 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/DialogBoxes/TestDialogue/DialogueBoxScript.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Custom/dialogue.png" type="Texture" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.811765, 0.776471, 0.721569, 1 )
+
+[sub_resource type="DynamicFontData" id=2]
+antialiased = false
+hinting = 1
+font_path = "res://Resources/Peepo.ttf"
+
+[sub_resource type="DynamicFont" id=3]
+size = 9
+use_mipmaps = true
+use_filter = true
+extra_spacing_bottom = -5
+font_data = SubResource( 2 )
+
+[node name="Root" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Box" type="Node2D" parent="."]
+position = Vector2( -8.88889, -8.88889 )
+
+[node name="Corners" type="Node2D" parent="Box"]
+
+[node name="top-left" type="Sprite" parent="Box/Corners"]
+position = Vector2( 0.88889, 0.88889 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 16, 16 )
+
+[node name="top-right" type="Sprite" parent="Box/Corners"]
+position = Vector2( 120.889, 0.888948 )
+rotation = 1.5708
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 16, 16 )
+
+[node name="bottom-right" type="Sprite" parent="Box/Corners"]
+position = Vector2( 120.889, 57.8889 )
+rotation = 3.14159
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 16, 16 )
+
+[node name="bottom-left" type="Sprite" parent="Box/Corners"]
+position = Vector2( 0.888889, 57.8889 )
+rotation = 4.71239
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 16, 16 )
+
+[node name="Edges" type="Node2D" parent="Box"]
+
+[node name="top" type="Sprite" parent="Box/Edges"]
+position = Vector2( 16.8889, 0.88889 )
+scale = Vector2( 5.5, 1 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 16, 0, 16, 16 )
+
+[node name="bottom" type="Sprite" parent="Box/Edges"]
+position = Vector2( 104.889, 57.8889 )
+rotation = 3.14159
+scale = Vector2( 5.50738, 1 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 16, 0, 16, 16 )
+
+[node name="right" type="Sprite" parent="Box/Edges"]
+position = Vector2( 120.889, 16.889 )
+rotation = 1.5708
+scale = Vector2( 1.62024, 1 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 16, 0, 16, 16 )
+
+[node name="left" type="Sprite" parent="Box/Edges"]
+position = Vector2( 0.888882, 42.6816 )
+rotation = 4.71239
+scale = Vector2( 1.61204, 1 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 16, 0, 16, 16 )
+
+[node name="EmitBit" type="Sprite" parent="Box"]
+position = Vector2( 32.8889, 49.8889 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 32, 0, 16, 16 )
+
+[node name="Panel" type="Panel" parent="Box"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 105.0
+margin_bottom = 42.0
+mouse_filter = 2
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 96.0
+margin_bottom = 32.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.145098, 0.145098, 0.164706, 1 )
+text = "Just... just get 
+\\ngoing ok?! (=v=)"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
