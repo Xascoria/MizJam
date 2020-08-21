@@ -30,7 +30,7 @@ signal dialogue_shown
 func _on_dialog_shown():
 	if auto_fade:
 		if current_dialog.modulate.a > 0.5:
-			$DialogBoxes/Tween.interpolate_property(current_dialog, "modulate:a", 1, 0, 0.3, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT, 2.5)
+			$DialogBoxes/Tween.interpolate_property(current_dialog, "modulate:a", 1, 0, 0.3, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT, 1.75)
 			$DialogBoxes/Tween.start()
 			emit_signal("dialogue_shown")
 		else:
